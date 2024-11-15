@@ -1,21 +1,18 @@
+@import url(https://db.onlinewebfonts.com/c/58af16514d95c0d78284e9f275ee75ae?family=ES+Build+TRIAL);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.es-build-trial {
+  font-family: "ES Build TRIAL";
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
