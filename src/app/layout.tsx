@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import LenisScrollLayout from "./lenis-scroll";
+// import LenisScrollLayout from "./lenis-scroll";
 import { Toaster } from "react-hot-toast";
 
 const esBuildTrial = localFont({
@@ -30,14 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${esBuildTrial.variable}   antialiased`}>
-        <LenisScrollLayout>
-          <Toaster
-            position="bottom-right"
-            containerClassName="z-[9999]"
-            reverseOrder={false}
-          />
-          {children}
-        </LenisScrollLayout>
+        {/* <LenisScrollLayout> */}
+        <Toaster
+          position="bottom-right"
+          containerClassName="z-[9999]"
+          reverseOrder={false}
+        />
+        {children}
+        {/* </LenisScrollLayout> */}
       </body>
     </html>
   );

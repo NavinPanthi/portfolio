@@ -16,3 +16,61 @@
   font-weight: 900;
   font-style: normal;
 }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+#connectMessage {
+  scroll-behavior: smooth;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@layer components {
+  .input {
+    @apply block w-full rounded-md border border-neutral-200 px-2 py-3 text-sm font-normal outline-none focus:border-neutral-dark;
+  }
+
+  .primary-btn {
+    @apply w-full rounded-full bg-base-dark px-3 py-[10px] text-base text-base-light disabled:cursor-not-allowed disabled:bg-primary-main/60;
+  }
+
+  .primary-btn-md {
+    @apply primary-btn px-4 py-3;
+  }
+
+  .secondary-btn {
+    @apply primary-btn border-2 border-base-dark bg-base-light text-base-dark disabled:cursor-not-allowed disabled:bg-neutral-50/50;
+  }
+  .secondary-btn-md {
+    @apply secondary-btn px-4 py-3;
+  }
+
+  .required {
+    @apply text-sm font-normal text-supporting-error;
+  }
+  .error-msg {
+    @apply mt-1 text-sm text-supporting-error;
+  }
+  .section-title {
+    @apply font-semibold text-2xl md:text-3xl;
+  }
+  .section-sub-title {
+    @apply font-semibold text-xl md:text-2xl;
+  }
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Remove the default margin */
+}

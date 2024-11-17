@@ -20,6 +20,12 @@ export default {
           light: "#FFFFFF",
           dark: "#000000",
         },
+        supporting: {
+          error: "#D12E24",
+          "error-light": "#FBEFEF",
+          success: "#317D35",
+          "success-light": "#EFF5EF",
+        },
       },
     },
   },
