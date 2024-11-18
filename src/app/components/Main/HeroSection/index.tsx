@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import React from "react";
-import heroImage from "@/assets/image.png";
+import heroImage from "@/assets/hero-section/image.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
