@@ -16,6 +16,7 @@ const ProjectCard = ({ item }: { item: ProjectDataType }) => {
         <Image
           src={item.image}
           alt={item.title}
+          priority={true}
           className="object-cover w-full h-48 rounded-2xl"
         />
       </div>
