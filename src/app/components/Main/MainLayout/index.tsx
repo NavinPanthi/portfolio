@@ -6,7 +6,7 @@ const MainLayout: React.FC<{ children: React.ReactNode; title: string }> = ({
   title,
 }) => {
   return (
-    <section className="min-h-[100vh] flex gap-32 flex-col justify-center w-full">
+    <section className="min-h-[100vh]  my-12 flex gap-32 flex-col justify-center w-full">
       <div className="flex">
         <p className="section-title">{title}</p>
         <p className="border-b-[3px] border-base-dark h-[28px] w-80 lg:w-[500px]"></p>
