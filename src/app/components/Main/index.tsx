@@ -7,7 +7,7 @@ import Skills from "./Skills";
 
 const Main = () => {
   return (
-    <section className="px-16 md:px-24 xl:px-40">
+    <section className="px-10 sm:px-16 md:px-24 xl:px-40">
       <HeroSection />
       <About />
       <Project />

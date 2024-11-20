@@ -6,7 +6,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
   return (
-    <section className="h-[calc(100vh-80px)] flex items-center  justify-center gap-36 xl:gap-64 ">
+    <section className="min-h-[calc(100vh-80px)] mt-20  flex items-center flex-col sm:flex-row  justify-center gap-16 md:gap-36 xl:gap-64 px-16">
       <div className="rounded-full border-2 size-48 md:size-80  border-base-dark">
         <Image
           src={heroImage}
@@ -23,10 +23,10 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl ">Front end developer</p>
         </div>
         <div className="flex gap-3 w-full">
-          <button className="md:secondary-btn-md secondary-btn ">
+          <button className="secondary-btn md:secondary-btn-md ">
             Download CV
           </button>
-          <button className="md:primary-btn-md primary-btn">
+          <button className="primary-btn md:primary-btn-md ">
             Contact Info
           </button>
         </div>
