@@ -13,34 +13,20 @@ body {
   box-sizing: border-box;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type="number"] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
 @layer components {
-  .input {
-    @apply block w-full rounded-md border border-neutral-200 px-2 py-3 text-sm font-normal outline-none focus:border-neutral-dark;
-  }
-
   .primary-btn {
-    @apply w-full rounded-full bg-base-dark px-1 py-[10px] text-base text-base-light disabled:cursor-not-allowed disabled:bg-primary-main/60;
+    @apply w-fit rounded-full bg-base-dark px-5 sm:px-3 py-[8px] text-base text-base-light disabled:cursor-not-allowed disabled:bg-primary-main/60;
   }
 
   .primary-btn-md {
-    @apply primary-btn px-4 py-3;
+    @apply primary-btn px-4 py-3 w-full;
   }
 
   .secondary-btn {
     @apply primary-btn border-2 border-base-dark bg-base-light text-base-dark disabled:cursor-not-allowed disabled:bg-neutral-50/50;
   }
   .secondary-btn-md {
-    @apply secondary-btn px-4 py-3;
+    @apply secondary-btn px-4 py-3 w-full;
   }
 
   .required {
@@ -58,9 +44,4 @@ input[type="number"] {
   .tech-badge {
     @apply text-[12px] rounded-full px-2 py-1 whitespace-nowrap font-semibold w-fit bg-base-dark text-base-light;
   }
-}
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0; /* Remove the default margin */
 }

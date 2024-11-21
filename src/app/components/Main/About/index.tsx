@@ -10,8 +10,8 @@ const About = () => {
   return (
     <MainLayout title="About">
       <div className="flex gap-20 md:gap-32 xl:gap-48 w-full flex-col ">
-        <div className=" flex  md:flex-row flex-col justify-center gap-20">
-          <div className="border-2 rounded-3xl w-80 h-44 md:w-96 md:h-52 2xl:w-[500px] 2xl:h-[250px] flex flex-col items-center 2xl:pt-10 border-neutral-dark justify-around relative p-4">
+        <div className=" flex  md:flex-row flex-col justify-center items-center  gap-20">
+          <div className="border-2 rounded-3xl w-full h-44 md:w-96 md:h-52 2xl:w-[500px] 2xl:h-[250px] flex flex-col items-center 2xl:pt-10 border-neutral-dark justify-around relative p-4">
             <p className="section-subtitle">Experience</p>
             <div className="flex flex-col items-center gap-4">
               <p className="text-neutral-light ">1+ year</p>
@@ -21,7 +21,7 @@ const About = () => {
               <PiCertificateFill className="size-5 2xl:size-10" />
             </div>
           </div>
-          <div className="border-2 rounded-3xl w-80 h-44 md:w-96 md:h-52 2xl:w-[500px] 2xl:h-[250px] flex flex-col items-center  border-neutral-dark justify-around p-4 relative 2xl:pt-10">
+          <div className="border-2 rounded-3xl w-full h-44 md:w-96 md:h-52 2xl:w-[500px] 2xl:h-[250px] flex flex-col items-center  border-neutral-dark justify-around p-4 relative 2xl:pt-10">
             <p className="section-subtitle">Education</p>
             <div className="flex flex-col items-center gap-4">
               <p className="text-neutral-light">2021-2024</p>
