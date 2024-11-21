@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { scrollToView } from "@/lib/scrollToView";
+import React, { useEffect, useRef, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 
 import { RxCross2 } from "react-icons/rx";
@@ -23,7 +24,11 @@ const nav = [
 ];
 const getNav = (className?: string) => {
   return nav.map((item) => (
-    <li key={item.id} className={className}>
+    <li
+      key={item.id}
+      className={className}
+      onClick={() => scrollToView(item.title)}
+    >
       {item.title}
     </li>
   ));
@@ -31,9 +36,35 @@ const getNav = (className?: string) => {
 
 const Navbar = () => {
   const [isNavbarOpened, setIsNavbarOpened] = useState(false);
+  const ref = useRef<HTMLDivElement | null>(null);
+  const NavLists = () => {
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        if (ref.current && !ref.current.contains(event.target as Node)) {
+          setIsNavbarOpened(false);
+        }
+      };
+      document.addEventListener("click", handleClickOutside, true);
+      return () => {
+        document.removeEventListener("click", handleClickOutside, true);
+      };
+    }, []);
+
+    if (!isNavbarOpened) return null;
+    return (
+      <>
+        <ul className="flex flex-col gap-5 w-full items-center">
+          {getNav("w-full flex justify-center")}
+        </ul>
+      </>
+    );
+  };
   return (
     <>
-      <div className=" text-lg sm:text-xl bg-base-dark  min-h-20 items-center text-base-light w-full rounded-b-xl px-12 xl:px-48 flex absolute top-0 h-fit">
+      <div
+        ref={ref}
+        className="text-lg sm:text-xl bg-base-light sm:bg-base-dark  min-h-20 items-center text-base-dark sm:text-base-light w-full rounded-b-xl px-12 xl:px-48 flex absolute top-0 h-fit"
+      >
         <div className="hidden sm:flex items-center justify-between w-full ">
           <p className="flex-1">BPP</p>
           <ul className="flex gap-10 ">{getNav()}</ul>
@@ -57,11 +88,7 @@ const Navbar = () => {
               </span>
             )}
           </div>
-          {isNavbarOpened && (
-            <ul className="flex flex-col gap-5 w-full items-center">
-              {getNav()}
-            </ul>
-          )}
+          <NavLists />
         </div>
       </div>
     </>

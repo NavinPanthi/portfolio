@@ -20,7 +20,7 @@ const HeroSection = () => {
           <p className="text-2xl md:text-3xl font-semibold">
             Bed Prakash Panthi
           </p>
-          <p className="text-lg md:text-xl ">Front end developer</p>
+          <p className="text-lg md:text-xl">Front end developer</p>
         </div>
         <div className="flex gap-3 w-full">
           <button className="secondary-btn md:secondary-btn-md ">

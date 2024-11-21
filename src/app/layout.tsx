@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${esBuildTrial.variable}   `}>
+      <body className={esBuildTrial.variable}>
         <LenisScrollLayout>{children}</LenisScrollLayout>
       </body>
     </html>

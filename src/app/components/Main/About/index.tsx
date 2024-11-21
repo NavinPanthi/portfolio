@@ -51,7 +51,7 @@ const About = () => {
             code and am always seeking ways to improve performance and enhance
             user experience.
           </p>
-          <p>
+          <p className="hidden sm:block">
             In addition to coding, I enjoy working with tools and libraries that
             enhance productivity and interactivity, including Tenstack Query for
             data fetching and Framer Motion for animations. I am constantly

@@ -4,17 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: var(--font-es-build-trial), sans-serif;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.es-build-trial {
-  font-family: "ES Build TRIAL";
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
 }
 
 input::-webkit-outer-spin-button,
