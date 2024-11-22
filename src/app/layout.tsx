@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import LenisScrollLayout from "./lenis-scroll";
+// import LenisScrollLayout from "./lenis-scroll";
 import cn from "@/lib/classname";
 
 const esBuildTrial = localFont({
@@ -30,7 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={(cn("overflow-hidden "), esBuildTrial.variable)}>
-        <LenisScrollLayout>{children}</LenisScrollLayout>
+        {children}
+        {/* <LenisScrollLayout>{children}</LenisScrollLayout> */}
       </body>
     </html>
   );

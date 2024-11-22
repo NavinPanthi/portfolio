@@ -48,16 +48,18 @@ export const categories = [
 const Skills = () => {
   return (
     <MainLayout title="Skills">
-      <div className="bg-gray-100 py-10 px-5">
-        <div className="max-w-6xl mx-auto space-y-8">
+      <div className=" py-10 px-5">
+        <div className="max-w-6xl mx-auto space-y-10">
           {categories.map((category, index) => (
             <div key={index}>
-              <h2 className="text-2xl font-bold mb-4">{category.category}</h2>
+              <h2 className="section-subtitle  font-bold mb-6">
+                {category.category}
+              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="flex items-center gap-4 bg-white shadow-md rounded-lg p-4"
+                    className="flex items-center gap-4 bg-white  rounded-lg p-4 border-2 border-neutral-dark/40"
                   >
                     {skill?.image ? (
                       <Image
@@ -70,7 +72,7 @@ const Skills = () => {
                     )}
 
                     <div>
-                      <h3 className="text-lg font-semibold">{skill.name}</h3>
+                      <h3 className="md:text-lg font-semibold">{skill.name}</h3>
                     </div>
                   </div>
                 ))}

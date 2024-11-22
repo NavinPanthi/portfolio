@@ -12,7 +12,7 @@ const MainLayout: React.FC<{
   return (
     <section
       className={cn(
-        " my-16 sm:my-12 flex gap-16 sm:gap-24 md:gap-32 flex-col justify-center w-full",
+        " my-16 sm:my-12 flex gap-16 sm:gap-24 md:gap-32 flex-col justify-center w-full ",
         { "min-h-[100vh]": title !== NavTabs.ContactMe }
       )}
       id={title}

@@ -1,3 +1,4 @@
+"use client";
 import { NavTabs } from "@/app/enum/nav";
 import cn from "@/lib/classname";
 import { scrollToView } from "@/lib/scrollToView";

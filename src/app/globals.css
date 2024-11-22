@@ -19,21 +19,14 @@ body {
   }
 
   .primary-btn-md {
-    @apply primary-btn px-4 py-3 w-full;
+    @apply primary-btn px-4 py-3 w-full text-lg;
   }
 
   .secondary-btn {
     @apply primary-btn border-2 border-base-dark bg-base-light text-base-dark disabled:cursor-not-allowed disabled:bg-neutral-50/50;
   }
   .secondary-btn-md {
-    @apply secondary-btn px-4 py-3 w-full;
-  }
-
-  .required {
-    @apply text-sm font-normal text-supporting-error;
-  }
-  .error-msg {
-    @apply mt-1 text-sm text-supporting-error;
+    @apply secondary-btn px-4 py-3 w-full text-lg;
   }
   .section-title {
     @apply font-semibold text-2xl md:text-3xl;
@@ -41,7 +34,10 @@ body {
   .section-subtitle {
     @apply font-semibold text-xl md:text-2xl;
   }
+  .content-text{
+    @apply md:text-lg 2xl:text-xl;
+  }
   .tech-badge {
-    @apply text-[12px] rounded-full px-2 py-1 whitespace-nowrap font-semibold w-fit bg-base-dark text-base-light;
+    @apply text-sm rounded-full px-3 lg:px-4 py-1 lg:text-base whitespace-nowrap font-semibold w-fit bg-base-dark text-base-light;
   }
 }
