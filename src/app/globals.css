@@ -34,7 +34,7 @@ body {
   .section-subtitle {
     @apply font-semibold text-xl md:text-2xl;
   }
-  .content-text{
+  .content-text {
     @apply md:text-lg 2xl:text-xl;
   }
   .tech-badge {

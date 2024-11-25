@@ -2,6 +2,7 @@
 import { NavTabs } from "@/app/enum/nav";
 import cn from "@/lib/classname";
 import { scrollToView } from "@/lib/scrollToView";
+import { motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 
@@ -57,11 +58,19 @@ const Navbar = () => {
     if (!isNavbarOpened) return null;
     return (
       <>
-        <ul className="flex flex-col gap-5 w-full items-center ">
+        <motion.ul
+          className="flex flex-col gap-5 w-full items-center "
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{
+            duration: 0.25,
+            delay: 1,
+          }}
+        >
           {getNav(
             "w-full flex justify-center text-neutral-dark hover:text-base-dark "
           )}
-        </ul>
+        </motion.ul>
       </>
     );
   };
@@ -77,7 +86,7 @@ const Navbar = () => {
         id="Home"
       >
         <div className="hidden sm:flex items-center justify-between w-full ">
-          <p className="flex-1" onClick={() => scrollToView("Home")}>
+          <p className="flex-1" onClick={() => scrollToView(NavTabs.Home)}>
             BPP
           </p>
           <ul className="flex gap-10  ">{getNav()}</ul>

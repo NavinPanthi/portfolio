@@ -11,7 +11,7 @@
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.47",
     "classnames": "^2.5.1",
-    "motion": "^11.11.15",
+    "motion": "12.0.0-alpha.2",
     "next": "15.0.3",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",

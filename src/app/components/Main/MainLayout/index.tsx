@@ -6,9 +6,7 @@ import { NavTabs } from "@/app/enum/nav";
 const MainLayout: React.FC<{
   children: React.ReactNode;
   title: string;
-  className?: string;
-}> = ({ children, title, className }) => {
-  console.log(className, "dede");
+}> = ({ children, title }) => {
   return (
     <section
       className={cn(

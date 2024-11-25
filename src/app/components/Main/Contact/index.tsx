@@ -5,7 +5,7 @@ import { HiMail } from "react-icons/hi";
 
 const Contact = () => {
   return (
-    <MainLayout title="Contact me" className="!h-[700px]">
+    <MainLayout title="Contact me" >
       <div className="flex flex-col gap-8 items-center mb-4">
         <p>Find me on the following platforms!</p>
         <div className="secondary-btn-md flex gap-3 items-center justify-center max-w-[700px] text-base   md:text-lg">

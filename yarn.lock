@@ -1366,10 +1366,10 @@ foreground-child@^3.1.0:
     cross-spawn "^7.0.0"
     signal-exit "^4.0.1"
 
-framer-motion@^11.11.15:
-  version "11.11.15"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-11.11.15.tgz#f9a1c505adf84bf0184b6076e11464797cb86c02"
-  integrity sha512-fib+OpUe4nap4W1vhaDohnPU+42B5s1q+jNkNkb6TfzmDYtRhDyvn4mkRCAD5a2cQKOI3nJZP7yqGYtxnlmleg==
+framer-motion@^12.0.0-alpha.2:
+  version "12.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-12.0.0-alpha.2.tgz#feff37066ac169dd9e24ec2c86ce98cb20e88056"
+  integrity sha512-s603YLhCoX3GKaPDZnywwoFdd1T6gDFCfevVRek+TCpbvazUkITh+YZ3a6kqTvn4Aj7qQWT3vAmzWIjl/LsCFA==
   dependencies:
     tslib "^2.4.0"
 
@@ -1962,12 +1962,12 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.npmjs.org/minipass/-/minipass-7.1.2.tgz"
   integrity sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==
 
-motion@^11.11.15:
-  version "11.11.15"
-  resolved "https://registry.yarnpkg.com/motion/-/motion-11.11.15.tgz#cb927cf7a2f77f7252d89ae0422f617f0ed98f8a"
-  integrity sha512-lWdAvCWe8eyPg23d46S+W+DHnduS4qJcaDeRzM+NfwdInKif40ElCdxevoXqwo7blAHMXPkRC6RJWn7DbfzrZQ==
+motion@12.0.0-alpha.2:
+  version "12.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/motion/-/motion-12.0.0-alpha.2.tgz#07ce9a5bfcbbbac851227b8a3e2309af32d8c5b9"
+  integrity sha512-pslRUURjyS1Xb6lSdyc4LzOKhaCRj0PIqstb5dDIB/RxNO3MqSMU43o1rGtZs5h8DgRzRSPHE+E7yhh2NpwI8A==
   dependencies:
-    framer-motion "^11.11.15"
+    framer-motion "^12.0.0-alpha.2"
     tslib "^2.4.0"
 
 ms@^2.1.1, ms@^2.1.3:

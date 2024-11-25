@@ -3,4 +3,5 @@ export enum NavTabs {
   Projects = "Projects",
   Skills = "Skills",
   ContactMe = "Contact me",
+  Home = "Home",
 }
