@@ -1,16 +1,18 @@
 "use client";
 
 import React from "react";
-import MainLayout from "../MainLayout";
 
 import Image from "next/image";
-import { FaReact, FaJs } from "react-icons/fa";
+import { FaJs, FaReact } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
-import { SiTypescript, SiNextdotjs, SiRedux, SiPrisma } from "react-icons/si";
-import zustand from "@/assets/skills/zustand.png";
+import { SiNextdotjs, SiPrisma, SiRedux, SiTypescript } from "react-icons/si";
+
 import framerMotion from "@/assets/skills/framer-motion.png";
 import reactHookForm from "@/assets/skills/react-hook-form.png";
 import tenStackQuery from "@/assets/skills/tenstack-query.png";
+import zustand from "@/assets/skills/zustand.png";
+
+import MainLayout from "../MainLayout";
 
 export const categories = [
   {
@@ -48,18 +50,18 @@ export const categories = [
 const Skills = () => {
   return (
     <MainLayout title="Skills">
-      <div className=" py-10 px-5">
-        <div className="max-w-6xl mx-auto space-y-10">
+      <div className="px-5">
+        <div className="mx-auto max-w-6xl space-y-10">
           {categories.map((category, index) => (
             <div key={index}>
-              <h2 className="section-subtitle  font-bold mb-6">
+              <h2 className="section-subtitle mb-6 font-bold">
                 {category.category}
               </h2>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="flex items-center gap-4 bg-white  rounded-lg p-4 border-2 border-neutral-dark/40"
+                    className="flex items-center gap-4 rounded-lg border-2 border-neutral-dark/40 bg-white p-4"
                   >
                     {skill?.image ? (
                       <Image
@@ -72,7 +74,7 @@ const Skills = () => {
                     )}
 
                     <div>
-                      <h3 className="md:text-lg font-semibold">{skill.name}</h3>
+                      <h3 className="font-semibold md:text-lg">{skill.name}</h3>
                     </div>
                   </div>
                 ))}

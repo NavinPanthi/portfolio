@@ -1,12 +1,14 @@
 "use client";
+
+import React, { useEffect, useRef, useState } from "react";
+
 import { NavTabs } from "@/app/enum/nav";
+import { motion } from "motion/react";
+import { BiMenuAltRight } from "react-icons/bi";
+import { RxCross2 } from "react-icons/rx";
+
 import cn from "@/lib/classname";
 import { scrollToView } from "@/lib/scrollToView";
-import { motion } from "motion/react";
-import React, { useEffect, useRef, useState } from "react";
-import { BiMenuAltRight } from "react-icons/bi";
-
-import { RxCross2 } from "react-icons/rx";
 
 const nav = [
   {
@@ -59,7 +61,7 @@ const Navbar = () => {
     return (
       <>
         <motion.ul
-          className="flex flex-col gap-5 w-full items-center "
+          className="flex w-full flex-col items-center gap-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{
@@ -80,31 +82,31 @@ const Navbar = () => {
       <nav
         ref={ref}
         className={cn(
-          "text-lg sm:text-xl bg-base-light sm:bg-base-dark  min-h-20 items-center text-base-dark sm:text-base-light w-full rounded-b-xl  sm:px-12 xl:px-48 flex absolute top-0 h-fit tracking-wide",
-          { "shadow-2xl ": isNavbarOpened }
+          "absolute top-0 flex h-fit min-h-20 w-full items-center rounded-b-xl bg-base-light text-lg tracking-wide text-base-dark sm:bg-base-dark sm:px-12 sm:text-xl sm:text-base-light xl:px-48",
+          { "shadow-2xl": isNavbarOpened }
         )}
         id="Home"
       >
-        <div className="hidden sm:flex items-center justify-between w-full ">
+        <div className="hidden w-full items-center justify-between sm:flex">
           <p className="flex-1" onClick={() => scrollToView(NavTabs.Home)}>
             BPP
           </p>
-          <ul className="flex gap-10  ">{getNav()}</ul>
+          <ul className="flex gap-10">{getNav()}</ul>
         </div>
-        <div className="flex sm:hidden flex-col gap-8 items-center justify-between w-full p-6">
-          <div className="flex justify-between w-full">
+        <div className="flex w-full flex-col items-center justify-between gap-8 p-6 sm:hidden">
+          <div className="flex w-full justify-between">
             <p className="flex-1 self-start">BPP</p>
             {isNavbarOpened ? (
               <span>
                 <RxCross2
-                  className="text-3xl cursor-pointer"
+                  className="cursor-pointer text-3xl"
                   onClick={() => setIsNavbarOpened(false)}
                 />
               </span>
             ) : (
               <span>
                 <BiMenuAltRight
-                  className="text-3xl cursor-pointer"
+                  className="cursor-pointer text-3xl"
                   onClick={() => setIsNavbarOpened(true)}
                 />
               </span>

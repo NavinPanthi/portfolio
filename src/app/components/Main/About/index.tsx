@@ -1,41 +1,42 @@
 "use client";
+
 import React from "react";
 
-import MainLayout from "../MainLayout";
-
-import { PiCertificateFill } from "react-icons/pi";
 import { FaGraduationCap } from "react-icons/fa6";
+import { PiCertificateFill } from "react-icons/pi";
+
+import MainLayout from "../MainLayout";
 
 const About = () => {
   return (
     <MainLayout title="About">
-      <div className="flex gap-20 md:gap-32 xl:gap-48 w-full flex-col ">
-        <div className=" flex  md:flex-row flex-col justify-center items-center  gap-20">
-          <div className="border-2 rounded-3xl w-full min-h-44 md:w-96 md:h-52 2xl:w-[500px] 2xl:h-[250px] flex flex-col items-center 2xl:pt-10 border-neutral-dark justify-between relative p-4">
-            <p className="section-subtitle mt-4 mb-1 sm:mb-0">Experience</p>
-            <div className="flex flex-col items-center gap-3 sm:gap-4 content-text">
-              <p className="text-neutral-light ">1+ year</p>
+      <div className="flex w-full flex-col gap-20 md:gap-32 xl:gap-48">
+        <div className="flex flex-col items-center justify-center gap-20 md:flex-row">
+          <div className="relative flex min-h-44 w-full flex-col items-center justify-between rounded-3xl border-2 border-neutral-dark p-4 md:h-52 md:w-96 2xl:h-[250px] 2xl:w-[500px] 2xl:pt-10">
+            <p className="section-subtitle mb-1 mt-4 sm:mb-0">Experience</p>
+            <div className="content-text flex flex-col items-center gap-3 sm:gap-4">
+              <p className="text-neutral-light">1+ year</p>
               <p className="text-neutral-light">Frontend developer</p>
             </div>
-            <div className="rounded-full 2xl:size-20 absolute  top-[-20px] 2xl:top-[-40px] size-10 border-2 border-neutral-dark flex items-center justify-center bg-base-light">
+            <div className="absolute top-[-20px] flex size-10 items-center justify-center rounded-full border-2 border-neutral-dark bg-base-light 2xl:top-[-40px] 2xl:size-20">
               <PiCertificateFill className="size-5 2xl:size-10" />
             </div>
           </div>
-          <div className="border-2 rounded-3xl w-full min-h-44 md:w-96 md:h-52 2xl:w-[500px] 2xl:h-[250px] flex flex-col items-center  border-neutral-dark justify-between p-4 relative 2xl:pt-10">
-            <p className="section-subtitle mt-4 mb-1 sm:mb:0">Education</p>
-            <div className="flex flex-col items-center  gap-3 sm:gap-4 content-text">
+          <div className="relative flex min-h-44 w-full flex-col items-center justify-between rounded-3xl border-2 border-neutral-dark p-4 md:h-52 md:w-96 2xl:h-[250px] 2xl:w-[500px] 2xl:pt-10">
+            <p className="section-subtitle sm:mb:0 mb-1 mt-4">Education</p>
+            <div className="content-text flex flex-col items-center gap-3 sm:gap-4">
               <p className="text-neutral-light">2021-2024</p>
-              <p className="text-neutral-light flex ">
+              <p className="flex text-neutral-light">
                 BSc in Information & Technology
               </p>
-              <p className="text-neutral-light ">Asia Pacific University</p>
+              <p className="text-neutral-light">Asia Pacific University</p>
             </div>
-            <div className="rounded-full 2xl:size-20 absolute   top-[-20px] 2xl:top-[-40px] size-10 border-2 border-neutral-dark flex items-center justify-center bg-base-light">
+            <div className="absolute top-[-20px] flex size-10 items-center justify-center rounded-full border-2 border-neutral-dark bg-base-light 2xl:top-[-40px] 2xl:size-20">
               <FaGraduationCap className="size-5 2xl:size-10" />
             </div>
           </div>
         </div>
-        <div className="text-justify flex flex-col gap-2 text-neutral-dark content-text">
+        <div className="content-text flex flex-col gap-2 text-justify text-neutral-dark">
           <p>
             I am a passionate web developer with a strong focus on modern
             front-end technologies and JavaScript frameworks. My expertise spans

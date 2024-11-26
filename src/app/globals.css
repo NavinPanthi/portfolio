@@ -15,29 +15,29 @@ body {
 
 @layer components {
   .primary-btn {
-    @apply w-fit rounded-full bg-base-dark px-5 sm:px-3 py-[8px] text-base text-base-light disabled:cursor-not-allowed disabled:bg-primary-main/60;
+    @apply w-fit rounded-full bg-base-dark px-5 py-[8px] text-base text-base-light disabled:cursor-not-allowed disabled:bg-primary-main/60 sm:px-3;
   }
 
   .primary-btn-md {
-    @apply primary-btn px-4 py-3 w-full text-lg;
+    @apply primary-btn w-full px-4 py-3 text-lg;
   }
 
   .secondary-btn {
     @apply primary-btn border-2 border-base-dark bg-base-light text-base-dark disabled:cursor-not-allowed disabled:bg-neutral-50/50;
   }
   .secondary-btn-md {
-    @apply secondary-btn px-4 py-3 w-full text-lg;
+    @apply secondary-btn w-full px-4 py-3 text-lg;
   }
   .section-title {
-    @apply font-semibold text-2xl md:text-3xl;
+    @apply text-2xl font-semibold md:text-3xl;
   }
   .section-subtitle {
-    @apply font-semibold text-xl md:text-2xl;
+    @apply text-xl font-semibold md:text-2xl;
   }
   .content-text {
     @apply md:text-lg 2xl:text-xl;
   }
   .tech-badge {
-    @apply text-sm rounded-full px-3 lg:px-4 py-1 lg:text-base whitespace-nowrap font-semibold w-fit bg-base-dark text-base-light;
+    @apply w-fit whitespace-nowrap rounded-full bg-base-dark px-3 py-1 text-sm font-semibold text-base-light lg:px-4 lg:text-base;
   }
 }

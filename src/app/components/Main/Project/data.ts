@@ -1,8 +1,11 @@
 "use client";
-import enirman from "@/assets/projects/enirman.png";
-import bhoklayo from "@/assets/projects/bhoklayo.png";
-import milansathi from "@/assets/projects/milansathi.png";
+
 import { StaticImageData } from "next/image";
+
+import bhoklayo from "@/assets/projects/bhoklayo.png";
+import enirman from "@/assets/projects/enirman.png";
+import milansathi from "@/assets/projects/milansathi.png";
+
 export type ProjectDataType = {
   id: number;
   image: StaticImageData;
