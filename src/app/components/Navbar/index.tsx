@@ -28,15 +28,19 @@ const nav = [
     title: NavTabs.ContactMe,
   },
 ];
+
 const getNav = (className?: string) => {
   return nav.map((item) => (
-    <li
+    <motion.li
+      initial={{ y: -10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ type: "spring", delay: 0.1 }}
       key={item.id}
       className={cn("cursor-pointer", { className })}
       onClick={() => scrollToView(item.title)}
     >
       {item.title}
-    </li>
+    </motion.li>
   ));
 };
 
@@ -60,15 +64,7 @@ const Navbar = () => {
     if (!isNavbarOpened) return null;
     return (
       <>
-        <motion.ul
-          className="flex w-full flex-col items-center gap-5"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{
-            duration: 0.25,
-            delay: 1,
-          }}
-        >
+        <motion.ul className="flex w-full flex-col items-center gap-5">
           {getNav(
             "w-full flex justify-center text-neutral-dark hover:text-base-dark "
           )}
@@ -79,42 +75,47 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
+      <motion.nav
+        initial={{ y: -60 }}
+        animate={{ y: 0 }}
+        transition={{ type: "spring" }}
         ref={ref}
         className={cn(
           "absolute top-0 flex h-fit min-h-20 w-full items-center rounded-b-xl bg-base-light text-lg tracking-wide text-base-dark sm:bg-base-dark sm:px-12 sm:text-xl sm:text-base-light xl:px-48",
           { "shadow-2xl": isNavbarOpened }
         )}
-        id="Home"
+        id={NavTabs.Home}
       >
         <div className="hidden w-full items-center justify-between sm:flex">
-          <p className="flex-1" onClick={() => scrollToView(NavTabs.Home)}>
+          <motion.p
+            initial={{ y: -10, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: "spring", delay: 0.1 }}
+            className="flex-1"
+            onClick={() => scrollToView(NavTabs.Home)}
+          >
             BPP
-          </p>
+          </motion.p>
           <ul className="flex gap-10">{getNav()}</ul>
         </div>
         <div className="flex w-full flex-col items-center justify-between gap-8 p-6 sm:hidden">
           <div className="flex w-full justify-between">
             <p className="flex-1 self-start">BPP</p>
             {isNavbarOpened ? (
-              <span>
-                <RxCross2
-                  className="cursor-pointer text-3xl"
-                  onClick={() => setIsNavbarOpened(false)}
-                />
-              </span>
+              <RxCross2
+                className="cursor-pointer text-3xl"
+                onClick={() => setIsNavbarOpened(false)}
+              />
             ) : (
-              <span>
-                <BiMenuAltRight
-                  className="cursor-pointer text-3xl"
-                  onClick={() => setIsNavbarOpened(true)}
-                />
-              </span>
+              <BiMenuAltRight
+                className="cursor-pointer text-3xl"
+                onClick={() => setIsNavbarOpened(true)}
+              />
             )}
           </div>
           <NavLists />
         </div>
-      </nav>
+      </motion.nav>
     </>
   );
 };
