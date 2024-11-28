@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { NavTabs } from "@/app/enum/nav";
 import { motion } from "motion/react";
@@ -66,7 +66,7 @@ const Navbar = () => {
       <>
         <motion.ul className="flex w-full flex-col items-center gap-5">
           {getNav(
-            "w-full flex justify-center text-neutral-dark hover:text-base-dark "
+            "w-full flex justify-center text-neutral-dark  hover:text-base-dark "
           )}
         </motion.ul>
       </>
@@ -76,7 +76,7 @@ const Navbar = () => {
   return (
     <>
       <motion.nav
-        initial={{ y: -60 }}
+        initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ type: "spring" }}
         ref={ref}

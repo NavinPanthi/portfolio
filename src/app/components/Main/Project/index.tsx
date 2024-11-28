@@ -1,7 +1,5 @@
 "use client";
 
-import React from "react";
-
 import MainLayout from "../MainLayout";
 import ProjectCard from "./Card";
 import { projectData } from "./data";

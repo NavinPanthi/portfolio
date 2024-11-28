@@ -3,6 +3,7 @@
 import React from "react";
 
 import { NavTabs } from "@/app/enum/nav";
+import { motion } from "motion/react";
 
 import cn from "@/lib/classname";
 
@@ -10,6 +11,14 @@ const MainLayout: React.FC<{
   children: React.ReactNode;
   title: string;
 }> = ({ children, title }) => {
+  const lineVariants = {
+    hidden: { width: "0%", opacity: 0 }, // Initial state
+    visible: {
+      width: "50%",
+      opacity: 1,
+      transition: { duration: 0.7, type: "spring", delay: 0.2 }, // Animation details
+    },
+  };
   return (
     <section
       className={cn(
@@ -18,10 +27,15 @@ const MainLayout: React.FC<{
       )}
       id={title}
     >
-      <div className="flex">
+      <motion.div className="flex">
         <p className="section-title whitespace-nowrap">{title}</p>
-        <p className="h-[28px] w-80 border-b-[3px] border-base-dark lg:w-[500px]"></p>
-      </div>
+        <motion.p
+          variants={lineVariants}
+          initial="hidden"
+          whileInView="visible"
+          className="h-[28px] border-b-[3px] border-base-dark lg:w-[500px]"
+        ></motion.p>
+      </motion.div>
       {children}
     </section>
   );
