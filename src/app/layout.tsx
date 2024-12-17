@@ -15,8 +15,13 @@ const esBuildTrial = localFont({
 export const metadata: Metadata = {
   title: "Bed Prakash Panthi",
   description: "Frontend developer",
+  openGraph: {
+    title: "Bed Prakash Panthi ",
+    description: "Frontend developer",
+    url: "https://bedprakashpanthi.com.np",
+  },
   alternates: {
-    canonical: "./",
+    canonical: "https://bedprakashpanthi.com.np",
   },
 };
 
