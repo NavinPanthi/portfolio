@@ -36,7 +36,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="content-text flex flex-col gap-2 text-justify text-neutral-dark">
+        <div className="content-text flex flex-col gap-2 text-pretty text-neutral-dark">
           <p>
             I am a passionate web developer with a strong focus on modern
             front-end technologies and JavaScript frameworks. My expertise spans

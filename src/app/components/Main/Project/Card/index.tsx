@@ -15,23 +15,18 @@ const ProjectCard = ({ item }: { item: ProjectDataType }) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <motion.div
-          initial={{ scale: 1.5, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.7, type: "spring" }}
-          className="w-full rounded-2xl border-2 border-neutral-dark/80"
-        >
+        <div className="w-full overflow-hidden rounded-2xl border-2 border-neutral-dark/80">
           <Image
             src={item.image}
             alt={item.title}
             priority={true}
-            className="h-48 w-full rounded-2xl object-cover"
+            className="h-72 w-full rounded-2xl object-cover transition delay-100 ease-in-out hover:scale-110"
           />
-        </motion.div>
+        </div>
         <div className="flex h-full flex-col justify-between gap-3 md:gap-5">
           <div className="flex flex-1 flex-col gap-3 md:gap-5">
             <p className="section-subtitle">{item.title}</p>
-            <p className="space-x-3 text-justify text-neutral-dark 2xl:text-lg">
+            <p className="space-x-3 text-pretty text-neutral-dark 2xl:text-lg">
               {item.description}
             </p>
           </div>
