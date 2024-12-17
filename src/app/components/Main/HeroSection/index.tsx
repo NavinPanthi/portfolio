@@ -2,8 +2,8 @@
 
 import React from "react";
 
-import { NavTabs } from "@/app/enum/nav";
-import { Social } from "@/app/enum/social";
+import { NavTabs } from "@/app/enums/nav";
+import { Social } from "@/app/enums/social";
 import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";

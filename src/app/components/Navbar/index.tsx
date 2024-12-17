@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { NavTabs } from "@/app/enum/nav";
+import { NavTabs } from "@/app/enums/nav";
 import { motion } from "motion/react";
 import { BiMenuAltRight } from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
