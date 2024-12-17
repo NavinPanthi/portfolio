@@ -16,12 +16,18 @@ const ProjectCard = ({ item }: { item: ProjectDataType }) => {
         rel="noopener noreferrer"
       >
         <div className="w-full overflow-hidden rounded-2xl border-2 border-neutral-dark/80">
-          <Image
-            src={item.image}
-            alt={item.title}
-            priority={true}
-            className="h-72 w-full rounded-2xl object-cover transition delay-100 ease-in-out hover:scale-110"
-          />
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ stiffness: 100 }}
+            className="h-72 w-full overflow-hidden rounded-2xl"
+          >
+            <Image
+              src={item.image}
+              alt={item.title}
+              priority={true}
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
         </div>
         <div className="flex h-full flex-col justify-between gap-3 md:gap-5">
           <div className="flex flex-1 flex-col gap-3 md:gap-5">
